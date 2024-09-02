@@ -15,7 +15,7 @@ headers = {
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-origin",
-    "x-csrf-token": "MDk3OTczOTAtYTE2NS00NWY1LWE3MmEtYmIzMmZlMzJiYTZhOjE3MjM2NDE1OTMzODU",
+    "x-csrf-token": "1725277859658:undefined%7Cconsent:true%7Cc1:1%7Cc2:1%7Cc3:1%7Cc4:1%7Cc5:1%7Cc6:1%7Cc7:1%7Cc8:1%7Cc9:1%7Cc10:1%7Cc11:1%7Cc12:1%7Cc13:1%7Cc14:1%7Cc15:1%7Cts:1725277859659",
     "x-uber-rv-session-type": "desktop_session",
     "origin": "https://m.uber.com/",
     "referer": "https://m.uber.com/go/product-selection",

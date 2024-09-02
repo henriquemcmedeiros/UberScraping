@@ -1,0 +1,448 @@
+{
+    "data": {
+        "products": {
+            "classificationFilters": null,
+            "defaultVVID": "3825",
+            "hourlyTiersWithMinimumFare": [],
+            "intercity": null,
+            "links": [],
+            "productsUnavailableMessage": "Infelizmente, a Uber não está disponível na sua região.",
+            "renderRankingInformation": false,
+            "tiers": [
+                {
+                    "products": [
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "UberX",
+                            "detailedDescription": "Viagens baratas",
+                            "discountPrimary": "-60%",
+                            "displayName": "UberX",
+                            "estimatedTripTime": 2181,
+                            "etaStringShort": "1 min",
+                            "fare": "R$ 48,36",
+                            "fareAmountE5": 4836000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 48,36",
+                                    "fareAmountE5": 4836000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2181,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"9e99b2a8-7356-48b0-94e0-8d8d5a1e83c0\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"6a8e56b8-914e-4b48-a387-e6ad21d9c00c\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"9e99b2a8-7356-48b0-94e0-8d8d5a1e83c0\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"6f227d4f-74bf-5276-80f6-7c892efaf824\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"48.36\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"9e99b2a8-7356-48b0-94e0-8d8d5a1e83c0\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":3825,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":3825,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 58,36",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "3825",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2181,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"9e99b2a8-7356-48b0-94e0-8d8d5a1e83c0\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"6a8e56b8-914e-4b48-a387-e6ad21d9c00c\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"9e99b2a8-7356-48b0-94e0-8d8d5a1e83c0\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"6f227d4f-74bf-5276-80f6-7c892efaf824\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"48.36\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"9e99b2a8-7356-48b0-94e0-8d8d5a1e83c0\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":3825,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":3825,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "6a8e56b8-914e-4b48-a387-e6ad21d9c00c",
+                            "preAdjustmentValue": "R$ 58,36",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Select_v1.png",
+                            "productUuid": "6f227d4f-74bf-5276-80f6-7c892efaf824",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        },
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Black",
+                            "detailedDescription": "Viagens diárias de alta qualidade",
+                            "discountPrimary": "-60%",
+                            "displayName": "Black",
+                            "estimatedTripTime": 2247,
+                            "etaStringShort": "2 min",
+                            "fare": "R$ 107,45",
+                            "fareAmountE5": 10745000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 107,45",
+                                    "fareAmountE5": 10745000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2247,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"24183d4a-c773-4c08-aacc-14acfd45484a\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"f1faedb7-5825-484f-b236-24e2cd95ec23\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"24183d4a-c773-4c08-aacc-14acfd45484a\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"37350a57-4365-5e51-9f60-6ac07441a944\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"107.45\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"24183d4a-c773-4c08-aacc-14acfd45484a\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":1214,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"270f1512-7ed9-4337-b7fd-73c5a1fab4f4\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":1214,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 117,45",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "1214",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2247,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"24183d4a-c773-4c08-aacc-14acfd45484a\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"f1faedb7-5825-484f-b236-24e2cd95ec23\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"24183d4a-c773-4c08-aacc-14acfd45484a\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"37350a57-4365-5e51-9f60-6ac07441a944\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"107.45\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"24183d4a-c773-4c08-aacc-14acfd45484a\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":1214,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"270f1512-7ed9-4337-b7fd-73c5a1fab4f4\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":1214,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "f1faedb7-5825-484f-b236-24e2cd95ec23",
+                            "preAdjustmentValue": "R$ 117,45",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Black_v1.png",
+                            "productUuid": "37350a57-4365-5e51-9f60-6ac07441a944",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        },
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Comfort",
+                            "detailedDescription": "Melhores carros e experiência premium",
+                            "discountPrimary": "-60%",
+                            "displayName": "Comfort",
+                            "estimatedTripTime": 2200,
+                            "etaStringShort": "1 min",
+                            "fare": "R$ 83,88",
+                            "fareAmountE5": 8388000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 83,88",
+                                    "fareAmountE5": 8388000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2200,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"dee81bc5-c7cb-44da-bf89-c0cf31368ed6\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"4cefa6a0-efb5-41dc-a8bb-870f2c3212ba\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"dee81bc5-c7cb-44da-bf89-c0cf31368ed6\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"c9872e28-9e28-558a-867f-e27e23aa1020\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"83.88\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"dee81bc5-c7cb-44da-bf89-c0cf31368ed6\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20021715,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20021715,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 93,88",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "20021715",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2200,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"dee81bc5-c7cb-44da-bf89-c0cf31368ed6\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"4cefa6a0-efb5-41dc-a8bb-870f2c3212ba\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"dee81bc5-c7cb-44da-bf89-c0cf31368ed6\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"c9872e28-9e28-558a-867f-e27e23aa1020\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"83.88\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"dee81bc5-c7cb-44da-bf89-c0cf31368ed6\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20021715,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20021715,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "4cefa6a0-efb5-41dc-a8bb-870f2c3212ba",
+                            "preAdjustmentValue": "R$ 93,88",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/package_UberComfort_new_2022.png",
+                            "productUuid": "c9872e28-9e28-558a-867f-e27e23aa1020",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        }
+                    ],
+                    "title": "Recomendados",
+                    "__typename": "RVWebCommonProductTier"
+                },
+                {
+                    "products": [
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Comfort Planet",
+                            "detailedDescription": "Parte da sua tarifa irá ajudar a compensar suas emissões de carbono ",
+                            "discountPrimary": "-60%",
+                            "displayName": "Comfort Planet",
+                            "estimatedTripTime": 2200,
+                            "etaStringShort": "1 min",
+                            "fare": "R$ 84,51",
+                            "fareAmountE5": 8451000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 84,51",
+                                    "fareAmountE5": 8451000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2200,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"a46b3d30-aea4-4650-8dc8-ae8c21723eaa\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"4cefa6a0-efb5-41dc-a8bb-870f2c3212ba\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"a46b3d30-aea4-4650-8dc8-ae8c21723eaa\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"7319b07d-fdbb-5bf9-83be-95aba23d3a55\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"84.51\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"a46b3d30-aea4-4650-8dc8-ae8c21723eaa\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20041751,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20041751,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 94,51",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "20041751",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2200,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"a46b3d30-aea4-4650-8dc8-ae8c21723eaa\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"4cefa6a0-efb5-41dc-a8bb-870f2c3212ba\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"a46b3d30-aea4-4650-8dc8-ae8c21723eaa\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"7319b07d-fdbb-5bf9-83be-95aba23d3a55\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"84.51\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"a46b3d30-aea4-4650-8dc8-ae8c21723eaa\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20041751,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20041751,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "4cefa6a0-efb5-41dc-a8bb-870f2c3212ba",
+                            "preAdjustmentValue": "R$ 94,51",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/UberX_Green.png",
+                            "productUuid": "7319b07d-fdbb-5bf9-83be-95aba23d3a55",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        },
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Táxi Promo",
+                            "detailedDescription": "Táxi mais econômico com acesso à faixa de ônibus",
+                            "discountPrimary": "-60%",
+                            "displayName": "Táxi Promo",
+                            "estimatedTripTime": 2349,
+                            "etaStringShort": "4 min",
+                            "fare": "R$ 76,90",
+                            "fareAmountE5": 7690000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 76,90",
+                                    "fareAmountE5": 7690000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2349,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"87047e22-801d-4b65-a4e8-06725623fbe4\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"b1afcc8d-02ff-4bfb-be88-b0afed2a0ef2\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"87047e22-801d-4b65-a4e8-06725623fbe4\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"fb5dd014-2cdb-524b-aeeb-46b44c136d15\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"76.9\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"87047e22-801d-4b65-a4e8-06725623fbe4\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20025455,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"e3ddf1b4-588f-4be6-a4cb-cac8aa7116f0\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20025455,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 86,90",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "20025455",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2349,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"87047e22-801d-4b65-a4e8-06725623fbe4\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"b1afcc8d-02ff-4bfb-be88-b0afed2a0ef2\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"87047e22-801d-4b65-a4e8-06725623fbe4\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"fb5dd014-2cdb-524b-aeeb-46b44c136d15\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"76.9\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"87047e22-801d-4b65-a4e8-06725623fbe4\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20025455,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"e3ddf1b4-588f-4be6-a4cb-cac8aa7116f0\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20025455,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "b1afcc8d-02ff-4bfb-be88-b0afed2a0ef2",
+                            "preAdjustmentValue": "R$ 86,90",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Taxi_v1.png",
+                            "productUuid": "fb5dd014-2cdb-524b-aeeb-46b44c136d15",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        }
+                    ],
+                    "title": "Popular",
+                    "__typename": "RVWebCommonProductTier"
+                },
+                {
+                    "products": [
+                        {
+                            "badges": [],
+                            "capacity": 3,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Uber Pet",
+                            "detailedDescription": "Viagens reservadas com seu animal de estimação",
+                            "discountPrimary": "",
+                            "displayName": "Uber Pet",
+                            "estimatedTripTime": 2228,
+                            "etaStringShort": "2 min",
+                            "fare": "Reservar",
+                            "fareAmountE5": 4836000,
+                            "fares": [
+                                {
+                                    "capacity": 3,
+                                    "discountPrimary": "",
+                                    "fare": "Reservar",
+                                    "fareAmountE5": 4836000,
+                                    "hasPromo": false,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2228,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"5b1a38c0-23e4-4b74-b378-fabf9cbab470\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"6a8e56b8-914e-4b48-a387-e6ad21d9c00c\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"5b1a38c0-23e4-4b74-b378-fabf9cbab470\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"3e4eeff3-2a74-5672-bf5d-4fa8e4cb5f97\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"48.36\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"5b1a38c0-23e4-4b74-b378-fabf9cbab470\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20058683,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"88cf549a-65b4-430b-8cf1-13c41c66c3d6\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20058683,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": false,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "",
+                            "id": "20058683",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": {
+                                "header": "Uber Pet Reserve",
+                                "image": null,
+                                "description": "Uber Pet permite aos usuários solicitar viagens através do app, acompanhados de um animal de estimação (gato ou cão), através de reservas com no mínimo 30 minutos de antecedência. O usuário é o único responsável pelo animal de estimação e deverá acompanhá-lo durante toda a viagem, e também garantir  a sua segurança, bem como a integridade e cumprimento de todas as leis aplicáveis. A Uber não será responsável pelo animal de estimação e nenhuma cobertura de seguro é fornecida pela Uber ou pelos motoristas parceiros para animais de estimação. Recomendamos a utilização de cintos de segurança específicos ou bolsas/caixas de transporte e toalhas durante toda a viagem. O uso de  coleiras e focinheiras no seu animal de estimação é obrigatório caso ele seja de porte grande ou de raças consideradas violentas e, se não for o caso, ainda recomenda-se a utilização de coleiras e toalhas durante toda a viagem.  O Uber Pet (i) não limita ou afeta viagens com cão-guia (ii) encontra-se sujeito ao cumprimento dos Termos e Condições.",
+                                "enabled": true,
+                                "ctaUrl": "",
+                                "ctaDisplayString": "",
+                                "buttonLabel": "Confirmar",
+                                "showOnce": false,
+                                "__typename": "RVWebCommonProductLegalConsent"
+                            },
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2228,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"5b1a38c0-23e4-4b74-b378-fabf9cbab470\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"6a8e56b8-914e-4b48-a387-e6ad21d9c00c\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"5b1a38c0-23e4-4b74-b378-fabf9cbab470\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"3e4eeff3-2a74-5672-bf5d-4fa8e4cb5f97\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"48.36\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"5b1a38c0-23e4-4b74-b378-fabf9cbab470\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":20058683,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"88cf549a-65b4-430b-8cf1-13c41c66c3d6\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":20058683,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "6a8e56b8-914e-4b48-a387-e6ad21d9c00c",
+                            "preAdjustmentValue": "",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/UberX_Pet.png",
+                            "productUuid": "3e4eeff3-2a74-5672-bf5d-4fa8e4cb5f97",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        }
+                    ],
+                    "title": "Econômico",
+                    "__typename": "RVWebCommonProductTier"
+                },
+                {
+                    "products": [
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Táxi",
+                            "detailedDescription": "Táxi com acesso à faixa de ônibus",
+                            "discountPrimary": "",
+                            "displayName": "Táxi",
+                            "estimatedTripTime": 2318,
+                            "etaStringShort": "3 min",
+                            "fare": "R$ 94,00-128,00",
+                            "fareAmountE5": 12800000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "",
+                                    "fare": "R$ 94,00-128,00",
+                                    "fareAmountE5": 12800000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2318,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{\"currencyCode\":\"BRL\",\"fare\":\"R$ 94,00-128,00\",\"max\":128,\"min\":94},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"3f261bc3-9642-4051-8657-9d94e66bc2d3\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"38f0e86c-7055-46f6-876f-7ac3d09c9dda\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"3f261bc3-9642-4051-8657-9d94e66bc2d3\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"502e0f74-fd88-5370-915c-dc00d6a9c5dc\",\"upfrontFare\":null,\"vehicleViewID\":20031101,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 104,00-138,00",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": false,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "20031101",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": {
+                                "header": "Quanto vai custar?",
+                                "image": {
+                                    "url": "https://d1a3f4spazzrp4.cloudfront.net/car-types/legalConsentImages/UAU0152_AUS_UberTAXIIllustrationBanner-01.png",
+                                    "width": 645,
+                                    "__typename": "RVWebCommonProductImage"
+                                },
+                                "description": "O intervalo de valor apresentado aqui se trata de uma mera estimativa. O total a ser pago será calculado com base no valor mostrado no taxímetro físico* do táxi, ao final da corrida, somado a eventuais custos adicionais repassados pelo taxista, como o custo fixo (R$1,00). O taxista precisará inserir o valor do taxímetro no aplicativo, por isso, sempre verifique esse valor.",
+                                "enabled": true,
+                                "ctaUrl": "https://www.uber.com/br/pt-br/",
+                                "ctaDisplayString": "Termos de Uso",
+                                "buttonLabel": "",
+                                "showOnce": false,
+                                "__typename": "RVWebCommonProductLegalConsent"
+                            },
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2318,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{\"currencyCode\":\"BRL\",\"fare\":\"R$ 94,00-128,00\",\"max\":128,\"min\":94},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"3f261bc3-9642-4051-8657-9d94e66bc2d3\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"38f0e86c-7055-46f6-876f-7ac3d09c9dda\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"3f261bc3-9642-4051-8657-9d94e66bc2d3\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"502e0f74-fd88-5370-915c-dc00d6a9c5dc\",\"upfrontFare\":null,\"vehicleViewID\":20031101,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "38f0e86c-7055-46f6-876f-7ac3d09c9dda",
+                            "preAdjustmentValue": "",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Taxi_v1.png",
+                            "productUuid": "502e0f74-fd88-5370-915c-dc00d6a9c5dc",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        }
+                    ],
+                    "title": "Premium",
+                    "__typename": "RVWebCommonProductTier"
+                },
+                {
+                    "products": [
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Bag",
+                            "detailedDescription": "Seu UberX com porta-malas maior",
+                            "discountPrimary": "-60%",
+                            "displayName": "Bag",
+                            "estimatedTripTime": 2212,
+                            "etaStringShort": "1 min",
+                            "fare": "R$ 69,04",
+                            "fareAmountE5": 6904000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 69,04",
+                                    "fareAmountE5": 6904000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2212,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"22453b32-49d1-49eb-b7f1-b33ff6b28739\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"6a8e56b8-914e-4b48-a387-e6ad21d9c00c\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"22453b32-49d1-49eb-b7f1-b33ff6b28739\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"8317c705-ca2c-53ea-9d5b-6694e07f0549\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"69.04\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"22453b32-49d1-49eb-b7f1-b33ff6b28739\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":9065,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":9065,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 79,04",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "9065",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2212,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"22453b32-49d1-49eb-b7f1-b33ff6b28739\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"6a8e56b8-914e-4b48-a387-e6ad21d9c00c\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"22453b32-49d1-49eb-b7f1-b33ff6b28739\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"8317c705-ca2c-53ea-9d5b-6694e07f0549\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"69.04\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"22453b32-49d1-49eb-b7f1-b33ff6b28739\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":9065,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"faf51c67-2b2a-4c2a-941a-0dba7a3e813a\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":9065,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "6a8e56b8-914e-4b48-a387-e6ad21d9c00c",
+                            "preAdjustmentValue": "R$ 79,04",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Intercity_v1.png",
+                            "productUuid": "8317c705-ca2c-53ea-9d5b-6694e07f0549",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        },
+                        {
+                            "badges": [],
+                            "capacity": 4,
+                            "cityID": "458",
+                            "currencyCode": "BRL",
+                            "description": "Black Bag",
+                            "detailedDescription": "Seu Uber Black com porta-malas maior",
+                            "discountPrimary": "-60%",
+                            "displayName": "Black Bag",
+                            "estimatedTripTime": 2265,
+                            "etaStringShort": "2 min",
+                            "fare": "R$ 131,81",
+                            "fareAmountE5": 13181000,
+                            "fares": [
+                                {
+                                    "capacity": 4,
+                                    "discountPrimary": "-60%",
+                                    "fare": "R$ 131,81",
+                                    "fareAmountE5": 13181000,
+                                    "hasPromo": true,
+                                    "hasRidePass": false,
+                                    "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2265,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"c2dcf10c-2cad-451b-820a-a52f4c5e1e2c\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"f1faedb7-5825-484f-b236-24e2cd95ec23\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"c2dcf10c-2cad-451b-820a-a52f4c5e1e2c\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"3b5c6517-c985-53c6-97f0-c077e12e6019\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"131.81\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"c2dcf10c-2cad-451b-820a-a52f4c5e1e2c\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":9063,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"270f1512-7ed9-4337-b7fd-73c5a1fab4f4\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":9063,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                                    "preAdjustmentValue": "R$ 141,81",
+                                    "__typename": "RVWebCommonFare"
+                                }
+                            ],
+                            "hasPromo": true,
+                            "hasRidePass": false,
+                            "hourly": null,
+                            "iconType": "TAG",
+                            "id": "9063",
+                            "is3p": false,
+                            "isAvailable": true,
+                            "legalConsent": null,
+                            "meta": "{\"cityID\":\"458\",\"countryIso2\":\"BR\",\"etd\":{\"meta\":{\"isShownEtd\":null,\"cryptoVersion\":null,\"encryptedEtd\":null,\"lighthouseRequestUuid\":\"9f477edd-957a-4e03-93d5-6558f81226cc\"},\"state\":null,\"guaranteedTripTime\":null,\"pickupRequestTime\":null,\"stateShortDescription\":null,\"stateTimeDescription\":null,\"stateDetailedDescription\":null,\"creditsDescription\":null,\"stateDescriptionImageUrl\":null,\"estimatedTripTime\":2265,\"deviceTimeData\":null,\"tripUUID\":null,\"comparisonTripTime\":null,\"legalDisclaimer\":\"O cálculo do horário máximo de chegada leva em conta o trânsito e as viagens dos outros usuários ao longo do trajeto. Esse horário não é uma garantia.\",\"estimateRequestTime\":0,\"stateHeaderDescription\":null,\"etdDisplayString\":\"\",\"estimatedSoloOnTripTime\":2059},\"fareEstimateInfo\":{},\"fareFlowUUID\":\"35a40648-74bb-480e-b121-787c66a65f45\",\"fareRequestUUID\":\"c2dcf10c-2cad-451b-820a-a52f4c5e1e2c\",\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"fareUUID\":\"\",\"parentProductTypeUUID\":\"f1faedb7-5825-484f-b236-24e2cd95ec23\",\"pricingParams\":{\"fareSessionUUID\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"packageVariantUUID\":\"c2dcf10c-2cad-451b-820a-a52f4c5e1e2c\",\"requestLocation\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}},\"productUuid\":\"3b5c6517-c985-53c6-97f0-c077e12e6019\",\"upfrontFare\":{\"capacity\":1,\"currencyCode\":\"BRL\",\"destinationLat\":-23.6698233,\"destinationLng\":-46.7017363,\"fare\":\"131.81\",\"originLat\":-23.5277655,\"originLng\":-46.7785027,\"signature\":{\"expiresAt\":1725283909,\"issuedAt\":1725283669,\"signature\":\"{\\\"packageVariantUUID\\\":\\\"c2dcf10c-2cad-451b-820a-a52f4c5e1e2c\\\",\\\"fareSessionUUID\\\":\\\"280c79f8-5b6d-4a27-b84d-9414103dba36\\\",\\\"fareFlowUUID\\\":\\\"35a40648-74bb-480e-b121-787c66a65f45\\\"}\",\"version\":\"pricing_params_v1\"},\"vehicleViewId\":9063,\"estimationMethod\":null,\"knnDistance\":null,\"discountedFare\":null,\"ruleNames\":null,\"uuid\":\"280c79f8-5b6d-4a27-b84d-9414103dba36\",\"source\":null,\"ezpzFareBreakdown\":null,\"unmatchedKnnFare\":null,\"estimatedDuration\":null,\"dynamicFareInfo\":{\"isSobriety\":false,\"multiplier\":1,\"surgeSuppressionThreshold\":0,\"uuid\":\"270f1512-7ed9-4337-b7fd-73c5a1fab4f4\"},\"surgeMultiplier\":1,\"matchedKnnFare\":null,\"originalFare\":null,\"knnDuration\":null,\"ezpzFareEstimate\":null,\"originalFarePrePromo\":null,\"estimatedDistance\":null,\"knnFare\":null,\"ufpType\":null,\"typeSpecificData\":null,\"viaLocations\":[],\"unmodifiedDistance\":25304,\"alternativePrices\":null,\"destinationLocationID\":null},\"vehicleViewID\":9063,\"originalArgs\":{\"destinations\":[{\"latitude\":-23.6698233,\"longitude\":-46.7017363}],\"includeRecommended\":false,\"pickup\":{\"latitude\":-23.5277655,\"longitude\":-46.7785027}}}",
+                            "parentProductUuid": "f1faedb7-5825-484f-b236-24e2cd95ec23",
+                            "preAdjustmentValue": "R$ 141,81",
+                            "productImageUrl": "https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/BlackSUV_v1.png",
+                            "productUuid": "3b5c6517-c985-53c6-97f0-c077e12e6019",
+                            "reserveEnabled": false,
+                            "__typename": "RVWebCommonProduct"
+                        }
+                    ],
+                    "title": "Mais espaço",
+                    "__typename": "RVWebCommonProductTier"
+                }
+            ],
+            "__typename": "RVWebCommonProductsResponse"
+        }
+    }
+}
