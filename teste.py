@@ -61,12 +61,10 @@ async def main():
             tasks.append(fetch_data(session, data))
 
             # Executa o lote a cada 10 requisições
-            if len(tasks) == 1:
+            if len(tasks) == 10:
                 results = await asyncio.gather(*tasks)
                 # Processa os resultados aqui, por exemplo, armazenando em um DataFrame
                 for result in results:
-                    print(result)
-                    break
                     try:
                         for products in result["data"]["products"]["tiers"]:
                             for product in products["products"]:
@@ -79,8 +77,9 @@ async def main():
                                 }
                     except:
                         print("Não houve resposta")
+                        print(result)
                 
-                # Limpa as tasks e espera 10 segundos
+                # Limpa as tasks e espera 5 segundos
                 tasks = []
                 await asyncio.sleep(10)
         

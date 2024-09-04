@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 
 def get_csrf_token():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, proxy={"server": "http://localhost:8080"})
+        browser = p.chromium.launch(headless=False)
         context = browser.new_context()
         
         page = context.new_page()
@@ -26,8 +26,8 @@ def get_csrf_token():
 
         # Esperar a página carregar e o token estar disponível
         try:
-            page.wait_for_selector('meta[name="csrf-token"]', state='visible', timeout=10000)
-            csrf_token = page.get_attribute('meta[name="csrf-token"]', 'content')
+            page.wait_for_selector('meta[name="sid"]', state='visible', timeout=10000)
+            csrf_token = page.get_attribute('meta[name="sid"]', 'content')
             print('CSRF Token:', csrf_token)
         except Exception as e:
             print(f"Erro: {e}")
