@@ -1,9 +1,6 @@
-import requests
-import time
-from datetime import datetime
 import pandas as pd
-import aiohttp
-import asyncio
+import requests
+from datetime import datetime
 
 url = 'https://m.uber.com/go/graphql'
 
@@ -27,80 +24,57 @@ headers = {
     'x-csrf-token': 'QA.CAESELpJBBshTkEcqUxCjH3tub4YoY7ctwYiATEqJGUxZTdlN2ViLWFjYzYtNDUzMy1hM2U1LTg0MDBjM2RiYjllYjJAXjYfhK1bffG9NOjuROZH5EbbppJl7SpslphR6NZ-UgbefwZyZ3XcRsJdqYDL-QD2uLaYgNHSX0qrcpnsM_6LNjoBMUIIdWJlci5jb20.0RXMu-8voTyz415KW4Tx6VvBwGezbd2Wz3CTqW6iGAw'
 }
 
-df = pd.read_csv('cruzamentos.csv')
-
-async def fetch_data(session, data):
-    async with session.post(url, json=data, headers=headers) as response:
-        return await response.json()
-
-async def main():
-    async with aiohttp.ClientSession() as session:
-        tasks = []
-        for index, row in df.iterrows():
-            origem_ponto = row['origem_ponto']
-            origem_lat = row['origem_lat']
-            origem_long = row['origem_long']
-            
-            destino_ponto = row['destino_ponto']
-            destino_lat = row['destino_lat']
-            destino_long = row['destino_long']
-
-            print(f"DE: {origem_ponto} PARA: {destino_ponto} INDEX: {index + 1}")
-            tempo_chamada = datetime.now().strftime('%d/%m/%Y %H:%M')
-
-            data = {
-                "operationName": "Products",
-                "variables": {
-                    "includeRecommended": False,
-                    "destinations": [{"latitude": destino_lat, "longitude": destino_long}],
-                    "pickup": {"latitude": origem_lat, "longitude": origem_long}
-                },
-                "query": "query Products($destinations: [InputCoordinate!]!, $includeRecommended: Boolean = false, $pickup: InputCoordinate!, $pickupFormattedTime: String, $profileType: String, $profileUUID: String, $returnByFormattedTime: String, $stuntID: String, $targetProductType: EnumRVWebCommonTargetProductType) { products(destinations: $destinations, includeRecommended: $includeRecommended, pickup: $pickup, pickupFormattedTime: $pickupFormattedTime, profileType: $profileType, profileUUID: $profileUUID, returnByFormattedTime: $returnByFormattedTime, stuntID: $stuntID, targetProductType: $targetProductType) { ...ProductsFragment __typename }} fragment ProductsFragment on RVWebCommonProductsResponse { classificationFilters { ...ClassificationFiltersFragment __typename } defaultVVID hourlyTiersWithMinimumFare { ...HourlyTierFragment __typename } intercity { ...IntercityFragment __typename } links { iFrame text url __typename } productsUnavailableMessage renderRankingInformation tiers { ...TierFragment __typename } __typename } fragment BadgesFragment on RVWebCommonProductBadge { color text __typename } fragment ClassificationFiltersFragment on RVWebCommonClassificationFilters { filters { ...ClassificationFilterFragment __typename } hiddenVVIDs standardProductVVID __typename } fragment ClassificationFilterFragment on RVWebCommonClassificationFilter { currencyCode displayText fareDifference icon vvid __typename } fragment HourlyTierFragment on RVWebCommonHourlyTier { description distance fare fareAmountE5 farePerHour minutes packageVariantUUID preAdjustmentValue __typename } fragment IntercityFragment on RVWebCommonIntercityInfo { oneWayIntercityConfig(destinations: $destinations, pickup: $pickup) { ...IntercityConfigFragment __typename } roundTripIntercityConfig(destinations: $destinations, pickup: $pickup) { ...IntercityConfigFragment __typename } __typename } fragment IntercityConfigFragment on RVWebCommonIntercityConfig { description onDemandAllowed reservePickup { ...IntercityTimePickerFragment __typename } returnBy { ...IntercityTimePickerFragment __typename } __typename } fragment IntercityTimePickerFragment on RVWebCommonIntercityTimePicker { bookingRange { maximum minimum __typename } header { subTitle title __typename } __typename } fragment TierFragment on RVWebCommonProductTier { products { ...ProductFragment __typename } title __typename } fragment ProductFragment on RVWebCommonProduct { badges { ...BadgesFragment __typename } capacity cityID currencyCode description detailedDescription discountPrimary displayName estimatedTripTime etaStringShort fare fareAmountE5 fares { capacity discountPrimary fare fareAmountE5 hasPromo hasRidePass meta preAdjustmentValue __typename } hasPromo hasRidePass hourly { tiers { ...HourlyTierFragment __typename } overageRates { ...HourlyOverageRatesFragment __typename } __typename } iconType id is3p isAvailable legalConsent { ...ProductLegalConsentFragment __typename } meta parentProductUuid preAdjustmentValue productImageUrl productUuid reserveEnabled __typename } fragment ProductLegalConsentFragment on RVWebCommonProductLegalConsent { header image { url width __typename } description enabled ctaUrl ctaDisplayString buttonLabel showOnce __typename } fragment HourlyOverageRatesFragment on RVWebCommonHourlyOverageRates { perDistanceUnit perTemporalUnit __typename }"
-            }
-
-            tasks.append(fetch_data(session, data))
-
-            # Executa o lote a cada 10 requisições
-            if len(tasks) == 10:
-                results = await asyncio.gather(*tasks)
-                # Processa os resultados aqui, por exemplo, armazenando em um DataFrame
-                for result in results:
-                    try:
-                        for products in result["data"]["products"]["tiers"]:
-                            for product in products["products"]:
-                                obj_dados = {
-                                    "tipo": product["description"],
-                                    "preco": round(product["fareAmountE5"]/100_000, 2),
-                                    "tempo_estimado_viagem_min": round(product["estimatedTripTime"]/60, 2),
-                                    "tem_promocao": product["hasPromo"],
-                                    "data_atual": tempo_chamada
-                                }
-                    except:
-                        print("Não houve resposta")
-                        print(result)
-                
-                # Limpa as tasks e espera 5 segundos
-                tasks = []
-                await asyncio.sleep(10)
+def main():
+    df = pd.read_csv("locais_sp.csv")
+    
+    # Pega a latitude e longitude da primeira linha
+    ponto_inicial = str(df.loc[0, 'Local'])
+    origem_lat = float(df.loc[0, 'Latitude'])
+    origem_long = float(df.loc[0, 'Longitude'])
+    
+    # Loop para as demais linhas
+    for index in range(1, len(df)):
+        row = df.loc[index]
+        ponto_atual = row['Local']
+        destino_lat = row['Latitude']
+        destino_long = row['Longitude']
         
-        # Executa as tarefas restantes
-        if tasks:
-            results = await asyncio.gather(*tasks)
-            # Processa os resultados das tarefas restantes
-            for result in results:
-                try:
-                    for products in result["data"]["products"]["tiers"]:
-                        for product in products["products"]:
-                            obj_dados = {
-                                "tipo": product["description"],
-                                "preco": round(product["fareAmountE5"]/100_000, 2),
-                                "tempo_estimado_viagem_min": round(product["estimatedTripTime"]/60, 2),
-                                "tem_promocao": product["hasPromo"],
-                                "data_atual": tempo_chamada
-                            }
-                except:
-                    print("Não houve resposta")
-                    #await asyncio.sleep(10)
+        # Cria o objeto de dados
+        data = {
+            "operationName": "Products",
+            "variables": {
+                "includeRecommended": False,
+                "destinations": [{"latitude": origem_lat, "longitude": origem_long}],
+                "pickup": {"latitude": destino_lat, "longitude": destino_long}
+            },
+            "query": "query Products($destinations: [InputCoordinate!]!, $includeRecommended: Boolean = false, $pickup: InputCoordinate!, $pickupFormattedTime: String, $profileType: String, $profileUUID: String, $returnByFormattedTime: String, $stuntID: String, $targetProductType: EnumRVWebCommonTargetProductType) { products(destinations: $destinations, includeRecommended: $includeRecommended, pickup: $pickup, pickupFormattedTime: $pickupFormattedTime, profileType: $profileType, profileUUID: $profileUUID, returnByFormattedTime: $returnByFormattedTime, stuntID: $stuntID, targetProductType: $targetProductType) { ...ProductsFragment __typename }} fragment ProductsFragment on RVWebCommonProductsResponse { classificationFilters { ...ClassificationFiltersFragment __typename } defaultVVID hourlyTiersWithMinimumFare { ...HourlyTierFragment __typename } intercity { ...IntercityFragment __typename } links { iFrame text url __typename } productsUnavailableMessage renderRankingInformation tiers { ...TierFragment __typename } __typename } fragment BadgesFragment on RVWebCommonProductBadge { color text __typename } fragment ClassificationFiltersFragment on RVWebCommonClassificationFilters { filters { ...ClassificationFilterFragment __typename } hiddenVVIDs standardProductVVID __typename } fragment ClassificationFilterFragment on RVWebCommonClassificationFilter { currencyCode displayText fareDifference icon vvid __typename } fragment HourlyTierFragment on RVWebCommonHourlyTier { description distance fare fareAmountE5 farePerHour minutes packageVariantUUID preAdjustmentValue __typename } fragment IntercityFragment on RVWebCommonIntercityInfo { oneWayIntercityConfig(destinations: $destinations, pickup: $pickup) { ...IntercityConfigFragment __typename } roundTripIntercityConfig(destinations: $destinations, pickup: $pickup) { ...IntercityConfigFragment __typename } __typename } fragment IntercityConfigFragment on RVWebCommonIntercityConfig { description onDemandAllowed reservePickup { ...IntercityTimePickerFragment __typename } returnBy { ...IntercityTimePickerFragment __typename } __typename } fragment IntercityTimePickerFragment on RVWebCommonIntercityTimePicker { bookingRange { maximum minimum __typename } header { subTitle title __typename } __typename } fragment TierFragment on RVWebCommonProductTier { products { ...ProductFragment __typename } title __typename } fragment ProductFragment on RVWebCommonProduct { badges { ...BadgesFragment __typename } capacity cityID currencyCode description detailedDescription discountPrimary displayName estimatedTripTime etaStringShort fare fareAmountE5 fares { capacity discountPrimary fare fareAmountE5 hasPromo hasRidePass meta preAdjustmentValue __typename } hasPromo hasRidePass hourly { tiers { ...HourlyTierFragment __typename } overageRates { ...HourlyOverageRatesFragment __typename } __typename } iconType id is3p isAvailable legalConsent { ...ProductLegalConsentFragment __typename } meta parentProductUuid preAdjustmentValue productImageUrl productUuid reserveEnabled __typename } fragment ProductLegalConsentFragment on RVWebCommonProductLegalConsent { header image { url width __typename } description enabled ctaUrl ctaDisplayString buttonLabel showOnce __typename } fragment HourlyOverageRatesFragment on RVWebCommonHourlyOverageRates { perDistanceUnit perTemporalUnit __typename }"
+        }
+        
+        print(f"DE: {ponto_atual} PARA: {ponto_inicial} INDEX: {index}")
+        print("===========================================================")
+        response = requests.post(url, headers=headers, json=data)
+        tempo_chamada = datetime.now().strftime('%d/%m/%Y %H:%M')
+    
+        # Exibe o resultado
+        if response.status_code != 200:
+            print(f"Erro na requisição: {response.status_code}")
+            continue
+        result = response.json()
 
-# Executa a função principal
-asyncio.run(main())
+        try:
+            for products in result["data"]["products"]["tiers"]:
+                for product in products["products"]:
+                    obj_dados = {
+                        "tipo": product["description"],
+                        "preco": round(product["fareAmountE5"]/100_000, 2),
+                        "tempo_estimado_viagem_min": round(product["estimatedTripTime"]/60, 2),
+                        "tem_promocao": product["hasPromo"],
+                        "data_atual": tempo_chamada
+                    }
+                    print(obj_dados)
+        except:
+            print("Não houve resposta")
+            print(result)
+
+if __name__ == '__main__':
+    main()
