@@ -4,12 +4,15 @@ import urllib.request
 
 class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        url = self.path[1:]  
+        # Modifica a requisição para adicionar o prefixo do proxy
+        url = self.path[1:]  # Remove o prefixo '/' da URL
+
         if not url:
             self.send_response(400)
             self.end_headers()
             return
 
+        # Enviar a requisição para o servidor de destino
         try:
             with urllib.request.urlopen(url) as response:
                 self.send_response(response.getcode())
