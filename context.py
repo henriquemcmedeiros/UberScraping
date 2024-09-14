@@ -23,20 +23,34 @@ class Database:
     def close(self):
         self.conn.close()
 
-class Deslocamentos(Database):
-    def insert(self, id_local_origem, dist_haversine):
-        sql = f'''
-            INSERT INTO DESLOCAMENTOS (id_local_origem, dist_haversine)
-            VALUES ({id_local_origem}, {dist_haversine})
+class Locais(Database):
+    def insert(self, nome, latitude, longitude, dist_haversine):
+        sql = '''
+            INSERT INTO LOCAIS (nome, latitude, longitude, dist_haversine)
+            VALUES (?, ?, ?, ?)
         '''
-        self.cursor.execute(sql, id_local_origem, dist_haversine)
+        self.cursor.execute(sql, (nome, latitude, longitude, dist_haversine))
         self.commit()
 
-class Dados(Database):
-    def insert(self, id_deslocamento, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real):
-        sql = f'''
-            INSERT INTO DADOS (id_deslocamento, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real)
-            VALUES ({id_deslocamento}, {dia_Hora}, {preco}, {tempo_de_viagem}, {tempo_de_espera}, {tipo}, {tem_promo}, {dist_real})
+    def select(self):
+        sql = '''
+            SELECT * FROM LOCAIS
         '''
-        self.cursor.execute(sql, id_deslocamento, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real)
+        self.cursor.execute(sql)
+        return self.cursor.fetchall()  # Retorna os resultados da consulta
+
+class Dados(Database):
+    def insert(self, id_local, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real):
+        sql = f'''
+            INSERT INTO DADOS (id_local, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        '''
+        self.cursor.execute(sql, id_local, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real)
         self.commit()
+
+    def select(self):
+        sql = '''
+            SELECT * FROM DADOS
+        '''
+        self.cursor.execute(sql)
+        return self.cursor.fetchall()  # Retorna os resultados da consulta

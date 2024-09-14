@@ -1,6 +1,8 @@
 import pandas as pd
 import requests
+import re
 from datetime import datetime
+from context import Locais, Dados
 
 url = 'https://m.uber.com/go/graphql'
 
@@ -9,72 +11,76 @@ url = 'https://m.uber.com/go/graphql'
 headers = {
     'accept': '*/*',
     'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-    'cache-control': 'no-cache',
     'content-type': 'application/json',
-    'cookie': 'u.bdid=2448a34b-b593-469c-a364-79d4167cd4c7; marketing_vistor_id=d7cf0894-87ea-4cda-96c6-f161cbbdc10b; segmentCookie=b; utag_main_segment=a; utag_geo_code=BR; utag_main_optimizely_segment=b; udi-id=zfrHoRkp8EAOIKQuxdKLqnSfnb/FRAplzcBZZROMLgI/cPtXaefoAB7yfppRBSt8FaZS6OFVfmU2x4w0AkfCAq/D51hcZxIvUX6I8T1CEIWt49Fq3o0rCOq9gMDnz8zlGJrIt4dmtTxM37MszgxZpqgp1u5Krm3CVWIdL4wR+JPJciomv37GR0x2FlX8L606ePbiLtOSsCiZNNXt0JZn8g==ODmdB5E2jaIFSyY4sH5//Q==DoY3NTJpwp7U8LkVZdEQP2jstlNYWZeWMtBIlW6nDj8=; _cc=; _cid_cc=; _tt_enable_cookie=1; _ttp=IYkbYCaGkREXUnWnH3r4m8axRPL; _hjSessionUser_960703=eyJpZCI6ImFjNzk0ZDllLTg1YzAtNTQxMy05YWU0LTVhZTc0MDhkNDAxYiIsImNyZWF0ZWQiOjE3MjM2NDEzMzk2NTYsImV4aXN0aW5nIjp0cnVlfQ==; optimizelyEndUserId=oeu1723745463343r0.22427418846599045; ad_id=651862278850; _gcl_gs=2.1.k1$i1723750723; _gcl_dc=GCL.1723750772.Cj0KCQjwzva1BhD3ARIsADQuPnWIIj5NjJ4xAUI3YtiFYW_VC2Zi3E5xJJIkgNGIPSCIWWXu5HXwz9EaAiLuEALw_wcB; _gac_UA-7157694-35=1.1723750818.Cj0KCQjwzva1BhD3ARIsADQuPnWIIj5NjJ4xAUI3YtiFYW_VC2Zi3E5xJJIkgNGIPSCIWWXu5HXwz9EaAiLuEALw_wcB; _gcl_aw=GCL.1723750819.Cj0KCQjwzva1BhD3ARIsADQuPnWIIj5NjJ4xAUI3YtiFYW_VC2Zi3E5xJJIkgNGIPSCIWWXu5HXwz9EaAiLuEALw_wcB; utag_main_utm_campaign=CM2253871-search-google-brand_25_-99_BR-National_r_web_acq_cpc_pt_T1_Generic_BM_uber_kwd-12633382_651862278850_152896770931_b_c%3Bexp-1726170019072; utag_main_utmsource=AdWords_Brand%3Bexp-1726170019074; sid=QA.CAESELpJBBshTkEcqUxCjH3tub4YoY7ctwYiATEqJGUxZTdlN2ViLWFjYzYtNDUzMy1hM2U1LTg0MDBjM2RiYjllYjJAXjYfhK1bffG9NOjuROZH5EbbppJl7SpslphR6NZ-UgbefwZyZ3XcRsJdqYDL-QD2uLaYgNHSX0qrcpnsM_6LNjoBMUIIdWJlci5jb20.0RXMu-8voTyz415KW4Tx6VvBwGezbd2Wz3CTqW6iGAw; csid=1.1727465249448.T+JifrMUTVoChTYrv7trpC1KFIVGUbgnSmEOEkncZrw=; _gid=GA1.2.591123929.1725277844; _clck=ntykgr%7C2%7Cfou%7C0%7C1687; _ga_DKGN4Z56QF=GS1.1.1725303080.10.0.1725303080.0.0.0; __cf_bm=Righ6O3tZthB.AfHmRj5lXDprH7BKcQqzWAxnLRMJNo-1725303223-1.0.1.1-3nSdzJfAOi.Z4xwZV_CIg66gouiW8MW7WBoJWEntVNCpsEft9oKxkfWoBKgmJ6P3df5nu_lSoifRf5OPYCJ.PA; utag_main__sn=8; utag_main_ses_id=1725303086388%3Bexp-session; utag_main__ss=0%3Bexp-session; _hjSession_960703=eyJpZCI6ImFmY2FlMWQ4LWVmY2YtNDA5ZS04NDU3LWIxNjVlYmRkM2M4ZiIsImMiOjE3MjUzMDMwODcyNjUsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; _ua={"session_id":"263ca1f8-675b-4fe0-ad58-42dfdc11981a","session_time_ms":1725303250101}; mp_adec770be288b16d9008c964acfba5c2_mixpanel=%7B%22distinct_id%22%3A%20%22e1e7e7eb-acc6-4533-a3e5-8400c3dbb9eb%22%2C%22%24device_id%22%3A%20%221915103e768458-0dccb4907135fd-26001e51-1fa400-1915103e769fd6%22%2C%22%24search_engine%22%3A%20%22google%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fwww.google.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22www.google.com%22%2C%22%24user_id%22%3A%20%22e1e7e7eb-acc6-4533-a3e5-8400c3dbb9eb%22%2C%22utm_source%22%3A%20%22AdWords_Brand%22%2C%22utm_campaign%22%3A%20%22CM2253871-search-google-brand_25_-99_BR-National_r_web_acq_cpc_pt_T1_Generic_BM_uber_kwd-12633382_651862278850_152896770931_b_c%22%7D; _uetsid=5e2bb3c0692311efa5a599a5ba28aafb; _uetvid=9ea07cf05a3f11ef82236b48ae8961e4; udi-fingerprint=/F66Y2GDaywt9mdMvGpXo2U61otj6mVbwsRpsgJINQ59X3KYPKBZPIZO+FOx9xWv0/a42p+Bvjnwq6jGBSZJfg==5h8B9czZDLOG67i78RDvoO06ca+hoPqs7BRGoX2megw=; _clsk=s0rabq%7C1725303467077%7C9%7C0%7Cq.clarity.ms%2Fcollect; UBER_CONSENTMGR=1725303616049|consent:true; CONSENTMGR=1725303616049:undefined%7Cconsent:true%7Cc1:1%7Cc2:1%7Cc3:1%7Cc4:1%7Cc5:1%7Cc6:1%7Cc7:1%7Cc8:1%7Cc9:1%7Cc10:1%7Cc11:1%7Cc12:1%7Cc13:1%7Cc14:1%7Cc15:1%7Cts:1725303616050; _ga=GA1.2.2049931067.1723641096; _gat_gtag_UA_7157694_35=1; jwt-session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7IlVzZXItQWdlbnQiOiIiLCJ4LXViZXItY2xpZW50LWlkIjoiIiwieC11YmVyLWRldmljZSI6IiIsIngtdWJlci1jbGllbnQtdXNlci1zZXNzaW9uLWlkIjoiIiwidGVuYW5jeSI6InViZXIvcHJvZHVjdGlvbiJ9LCJpYXQiOjE3MjUzMDM3NjMsImV4cCI6MTcyNTM5MDE2M30.UX38DzZcYMC47Wds3Sr12yo3vrK9JKFl2UikhkPRrXE; _ga_XTGQLY6KPT=GS1.1.1725303087.8.1.1725303626.0.0.0; utag_main__pn=8%3Bexp-session; utag_main__se=26%3Bexp-session; utag_main__st=1725305427501%3Bexp-session',
+    'cookie': 'marketing_vistor_id=936e884c-8e65-4fe1-85d9-2bb4f995adfd; __cf_bm=ngNkr5.o56QiUKp04QWgAff5_Hj.p1N3y_6YXrY6.C8-1726348389-1.0.1.1-iPms1D4pR.M_AiEh6iKyzbW7OmSDu8tB.hkTrn_pRzOL59hFHP0.Eb_b6nSSK_htZJvJx2IOYQuy_ymUNuNs3Q; utag_main__sn=1; utag_main_ses_id=1726348261603%3Bexp-session; ad_id=; utag_main__ss=0%3Bexp-session; _hjSessionUser_960703=eyJpZCI6ImYzMzhlOTkxLTM0YWItNWU0Ny1iYzUwLTFhNGE2YmJjODBiZiIsImNyZWF0ZWQiOjE3MjYzNDgyNjE5NTAsImV4aXN0aW5nIjpmYWxzZX0=; _hjSession_960703=eyJpZCI6ImUyMzk4NWNlLTU5NTQtNDU0ZS1hY2IwLTA4YWY2YmI3ZjEzOSIsImMiOjE3MjYzNDgyNjE5NTEsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=; UBER_CONSENTMGR=1726348262938|consent:true; CONSENTMGR=1726348262938:undefined%7Cconsent:true%7Cc1:1%7Cc2:1%7Cc3:1%7Cc4:1%7Cc5:1%7Cc6:1%7Cc7:1%7Cc8:1%7Cc9:1%7Cc10:1%7Cc11:1%7Cc12:1%7Cc13:1%7Cc14:1%7Cc15:1%7Cts:1726348262938; _gid=GA1.2.516159033.1726348263; _gcl_gs=2.1.k1$i1726348261; _clck=5qikiz%7C2%7Cfp6%7C0%7C1718; _gcl_dc=GCL.1726348294.CjwKCAjw6JS3BhBAEiwAO9waF5KzjFF3bY9n9WV8LGL650z2O5il_fIA90BAVnFDUT1DdjzHgAGl-xoCHJ4QAvD_BwE; x-uber-analytics-session-id=ffc1f32e-c4cf-4e4b-86fd-cc0c6e7ec283; udi-id=NaUrb7idJppcV+G9k2jauTD/Sw5kFPJOBUx2ObmcbkrxWqI/+fjOoZ4YqB2AKZRBK89airnwcCsWCJj5wAjHBkPTOzXKbpdiAtGBmbAf+wCSUQzt2OTvxgRGeSjAKUXKCNrEJN6gogcS9eWnS1ZNwtSg+YTahpfNx/Pz6i9Jb7G9MNnkHBx80K+9c/UWWfMeoEly+ESf+K6lIQHq+wVU6A==MvcOVqvnrKQZ4NYCxawZ0A==1W7CEXY1dw5JZJ+jVZMe3u+/16ECbj7mEpBkc4hCx+k=; isWebLogin=true; sid=QA.CAESEHAaUaxyB0aztAjKxSPNAzMYoJO2uAYiATEqJGUxZTdlN2ViLWFjYzYtNDUzMy1hM2U1LTg0MDBjM2RiYjllYjJAbhKa9aDJbRC6JA1Ui7jhdscj8w4y7AQ5L6DSezQEarhdo2WzsCS6BsdRUvW0p2NCyJIxJeZeRadihbDJwUNaAzoBMUIIdWJlci5jb20.luvf8pMq_RVuOizdYULmyhKKce4m205HoouYSTy5fnM; csid=1.1728940448375.AEa6856Q9GVKZEzpCU7MAEJ7Hna8gkuhT4SrXTuP3Ro=; _ua={"session_id":"76a1db34-7567-4844-b1bd-b8377055d797","session_time_ms":1726348448518}; utag_main__pn=2%3Bexp-session; _uetsid=d8c241e072dd11efba6b690c62c09a5d; _uetvid=d8c2723072dd11efbc94b90933611754; _fbp=fb.1.1726348321242.858086023778373445; _gcl_au=1.1.104584512.1726348321; utag_main__se=6%3Bexp-session; utag_main__st=1726350122223%3Bexp-session; utag_main_utm_campaign=CM2334257-googlepmax-googlepmax_25_-99_BR-National_r_web_acq_cpc_pt-BR_Generic______c%3Bexp-1728767522225; utag_main_utmsource=GooglePMAX%3Bexp-1728767522226; _tt_enable_cookie=1; _ttp=2rBGBU20va4ZR2V9QytilaFPbkq; _gcl_aw=GCL.1726348322.CjwKCAjw6JS3BhBAEiwAO9waF5KzjFF3bY9n9WV8LGL650z2O5il_fIA90BAVnFDUT1DdjzHgAGl-xoCHJ4QAvD_BwE; mp_adec770be288b16d9008c964acfba5c2_mixpanel=%7B%22distinct_id%22%3A%20%22e1e7e7eb-acc6-4533-a3e5-8400c3dbb9eb%22%2C%22%24device_id%22%3A%20%22191f260e69f137d-00d12cfeac06e3-26001151-1fa400-191f260e6a0152f%22%2C%22utm_source%22%3A%20%22GooglePMAX%22%2C%22utm_campaign%22%3A%20%22CM2334257-googlepmax-googlepmax_25_-99_BR-National_r_web_acq_cpc_pt-BR_Generic______c%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fauth.uber.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22auth.uber.com%22%2C%22%24user_id%22%3A%20%22e1e7e7eb-acc6-4533-a3e5-8400c3dbb9eb%22%7D; _ga_XTGQLY6KPT=GS1.1.1726348263.1.1.1726348322.0.0.0; _cc=; _cid_cc=; _ga=GA1.2.1779516301.1726348263; _gac_UA-7157694-35=1.1726348323.CjwKCAjw6JS3BhBAEiwAO9waF5KzjFF3bY9n9WV8LGL650z2O5il_fIA90BAVnFDUT1DdjzHgAGl-xoCHJ4QAvD_BwE; udi-fingerprint=Cr+r9RBnXdpCccbviRqd1//DFwG7cO8miHUgER/wIuyhYOTGzrZrMhLAG7Yqi81Ip5vT+k1HZz6jmHczr32t9Q==KZBy9l1VOnYX0X6892olqGIe9pXvPfTuWU2I/Yh+zC4=; _clsk=1wf3j4b%7C1726348324575%7C2%7C0%7Cq.clarity.ms%2Fcollect; _gat_gtag_UA_7157694_35=1; jwt-session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjYzNDg0NzIsImV4cCI6MTcyNjQzNDg3Mn0.tJQklFt9mwpViOARNKiQb_av1Mm4oHTpN5y2xj4523w',
     'origin': 'https://www.uber.com',
-    'pragma': 'no-cache',
     'referer': 'https://www.uber.com/',
     'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-site',
-    'x-csrf-token': 'QA.CAESELpJBBshTkEcqUxCjH3tub4YoY7ctwYiATEqJGUxZTdlN2ViLWFjYzYtNDUzMy1hM2U1LTg0MDBjM2RiYjllYjJAXjYfhK1bffG9NOjuROZH5EbbppJl7SpslphR6NZ-UgbefwZyZ3XcRsJdqYDL-QD2uLaYgNHSX0qrcpnsM_6LNjoBMUIIdWJlci5jb20.0RXMu-8voTyz415KW4Tx6VvBwGezbd2Wz3CTqW6iGAw'
+    'x-csrf-token': 'QA.CAESEHAaUaxyB0aztAjKxSPNAzMYoJO2uAYiATEqJGUxZTdlN2ViLWFjYzYtNDUzMy1hM2U1LTg0MDBjM2RiYjllYjJAbhKa9aDJbRC6JA1Ui7jhdscj8w4y7AQ5L6DSezQEarhdo2WzsCS6BsdRUvW0p2NCyJIxJeZeRadihbDJwUNaAzoBMUIIdWJlci5jb20.luvf8pMq_RVuOizdYULmyhKKce4m205HoouYSTy5fnM'
 }
 
 def main():
-    df = pd.read_csv("locais_sp.csv")
+    locais_class = Locais()
+    dados_class = Dados()
+    locais_arr = locais_class.select()
     
-    # Pega a latitude e longitude da primeira linha
-    ponto_inicial = str(df.loc[0, 'Local'])
-    origem_lat = float(df.loc[0, 'Latitude'])
-    origem_long = float(df.loc[0, 'Longitude'])
+    # Definição do ponto de destino
+    ponto_final = "Praça da Sé"
+    destino_lat = -23.5503898
+    destino_long = -46.6330809
+    tempo_chamada = datetime.now() #.strftime('%d/%m/%Y %H:%M')
     
-    # Loop para as demais linhas
-    for index in range(1, len(df)):
-        row = df.loc[index]
-        ponto_atual = row['Local']
-        destino_lat = row['Latitude']
-        destino_long = row['Longitude']
+    for index in range(1, len(locais_arr)):
+        row = locais_arr[index]
+        ponto_atual = str(row[1])
+        origem_lat = float(row[2])
+        origem_long = float(row[3])
         
-        # Cria o objeto de dados
+        # Dados da requisição
         data = {
             "operationName": "Products",
             "variables": {
                 "includeRecommended": False,
-                "destinations": [{"latitude": origem_lat, "longitude": origem_long}],
-                "pickup": {"latitude": destino_lat, "longitude": destino_long}
+                "destinations": [{"latitude": destino_lat, "longitude": destino_long}],
+                "pickup": {"latitude": origem_lat, "longitude": origem_long}
             },
-            "query": "query Products($destinations: [InputCoordinate!]!, $includeRecommended: Boolean = false, $pickup: InputCoordinate!, $pickupFormattedTime: String, $profileType: String, $profileUUID: String, $returnByFormattedTime: String, $stuntID: String, $targetProductType: EnumRVWebCommonTargetProductType) { products(destinations: $destinations, includeRecommended: $includeRecommended, pickup: $pickup, pickupFormattedTime: $pickupFormattedTime, profileType: $profileType, profileUUID: $profileUUID, returnByFormattedTime: $returnByFormattedTime, stuntID: $stuntID, targetProductType: $targetProductType) { ...ProductsFragment __typename }} fragment ProductsFragment on RVWebCommonProductsResponse { classificationFilters { ...ClassificationFiltersFragment __typename } defaultVVID hourlyTiersWithMinimumFare { ...HourlyTierFragment __typename } intercity { ...IntercityFragment __typename } links { iFrame text url __typename } productsUnavailableMessage renderRankingInformation tiers { ...TierFragment __typename } __typename } fragment BadgesFragment on RVWebCommonProductBadge { color text __typename } fragment ClassificationFiltersFragment on RVWebCommonClassificationFilters { filters { ...ClassificationFilterFragment __typename } hiddenVVIDs standardProductVVID __typename } fragment ClassificationFilterFragment on RVWebCommonClassificationFilter { currencyCode displayText fareDifference icon vvid __typename } fragment HourlyTierFragment on RVWebCommonHourlyTier { description distance fare fareAmountE5 farePerHour minutes packageVariantUUID preAdjustmentValue __typename } fragment IntercityFragment on RVWebCommonIntercityInfo { oneWayIntercityConfig(destinations: $destinations, pickup: $pickup) { ...IntercityConfigFragment __typename } roundTripIntercityConfig(destinations: $destinations, pickup: $pickup) { ...IntercityConfigFragment __typename } __typename } fragment IntercityConfigFragment on RVWebCommonIntercityConfig { description onDemandAllowed reservePickup { ...IntercityTimePickerFragment __typename } returnBy { ...IntercityTimePickerFragment __typename } __typename } fragment IntercityTimePickerFragment on RVWebCommonIntercityTimePicker { bookingRange { maximum minimum __typename } header { subTitle title __typename } __typename } fragment TierFragment on RVWebCommonProductTier { products { ...ProductFragment __typename } title __typename } fragment ProductFragment on RVWebCommonProduct { badges { ...BadgesFragment __typename } capacity cityID currencyCode description detailedDescription discountPrimary displayName estimatedTripTime etaStringShort fare fareAmountE5 fares { capacity discountPrimary fare fareAmountE5 hasPromo hasRidePass meta preAdjustmentValue __typename } hasPromo hasRidePass hourly { tiers { ...HourlyTierFragment __typename } overageRates { ...HourlyOverageRatesFragment __typename } __typename } iconType id is3p isAvailable legalConsent { ...ProductLegalConsentFragment __typename } meta parentProductUuid preAdjustmentValue productImageUrl productUuid reserveEnabled __typename } fragment ProductLegalConsentFragment on RVWebCommonProductLegalConsent { header image { url width __typename } description enabled ctaUrl ctaDisplayString buttonLabel showOnce __typename } fragment HourlyOverageRatesFragment on RVWebCommonHourlyOverageRates { perDistanceUnit perTemporalUnit __typename }"
+            "query": "query Products($destinations: [InputCoordinate!]!, $includeRecommended: Boolean = false, $pickup: InputCoordinate!) { products(destinations: $destinations, includeRecommended: $includeRecommended, pickup: $pickup) { tiers { products { description fareAmountE5 estimatedTripTime hasPromo meta } } } }"
         }
         
-        print(f"DE: {ponto_atual} PARA: {ponto_inicial} INDEX: {index}")
+        print(f"DE: {ponto_atual} PARA: {ponto_final} INDEX: {index}")
         print("===========================================================")
+
         response = requests.post(url, headers=headers, json=data)
-        tempo_chamada = datetime.now().strftime('%d/%m/%Y %H:%M')
     
-        # Exibe o resultado
+        # Exibe o resultado da requisição
         if response.status_code != 200:
             print(f"Erro na requisição: {response.status_code}")
             continue
         result = response.json()
 
         try:
-            for products in result["data"]["products"]["tiers"]:
-                for product in products["products"]:
-                    obj_dados = {
-                        "tipo": product["description"],
-                        "preco": round(product["fareAmountE5"]/100_000, 2),
-                        "tempo_estimado_viagem_min": round(product["estimatedTripTime"]/60, 2),
-                        "tem_promocao": product["hasPromo"],
-                        "data_atual": tempo_chamada
-                    }
-                    print(obj_dados)
-        except:
-            print("Não houve resposta")
-            print(result)
+            for tier in result["data"]["products"]["tiers"]:
+                for product in tier["products"]:
+                    # Extração de dados do campo "meta" usando expressões regulares
+                    estimated_solo_on_trip_time_match = re.search(r'"estimatedSoloOnTripTime":(\d+)', product["meta"])
+                    unmodified_distance_match = re.search(r'"unmodifiedDistance":(\d+)', product["meta"])
+
+                    # Verifica se a correspondência foi encontrada e extrai os valores
+                    estimated_solo_on_trip_time = int(estimated_solo_on_trip_time_match.group(1)) if estimated_solo_on_trip_time_match else None
+                    unmodified_distance = float(unmodified_distance_match.group(1)) if unmodified_distance_match else None
+
+                    tipo = product["description"]
+                    preco = round(product["fareAmountE5"] / 100_000, 2)
+                    tempo_estimado_viagem_sec = int(product["estimatedTripTime"])
+                    tempo_estimado_espera_sec = tempo_estimado_viagem_sec - estimated_solo_on_trip_time if estimated_solo_on_trip_time else None
+                    tem_promocao = int(product["hasPromo"])
+
+                    # Insere os dados na tabela
+                    dados_class.insert(int(row[0]), tempo_chamada, preco, tempo_estimado_viagem_sec, tempo_estimado_espera_sec, tipo, tem_promocao, unmodified_distance)
+        except Exception as e:
+            print(f"Erro no processamento da resposta: {e}")
 
 if __name__ == '__main__':
     main()
