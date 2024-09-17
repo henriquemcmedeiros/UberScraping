@@ -1,4 +1,4 @@
-name: Run Python Script Every Hour
+name: Run Python Script Every Hour with Env Variables
 
 on:
   schedule:
@@ -19,6 +19,13 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.12.5'
+
+      # Adicionar variáveis de ambiente a partir dos secrets
+      - name: Setup environment variables
+        run: |
+          echo "DB_HOST=${{ secrets.DB_HOST }}" >> $GITHUB_ENV
+          echo "DB_USER=${{ secrets.DB_USER }}" >> $GITHUB_ENV
+          echo "DB_PASS=${{ secrets.DB_PASS }}" >> $GITHUB_ENV
 
       # Instalar dependências, se houver
       - name: Install dependencies
