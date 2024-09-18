@@ -39,6 +39,11 @@ jobs:
           odbcinst -q -d -n "ODBC Driver 17 for SQL Server"
           odbcinst -q -d
 
+      # Testar conexão com o SQL Server
+      - name: Test SQL Server Connection
+        run: |
+          sqlcmd -S ${{ secrets.DB_SERVER }} -d ${{ secrets.DB_NAME }} -U ${{ secrets.DB_USER }} -P ${{ secrets.DB_PASSWORD }} -Q "SELECT 1" || echo "Falha na conexão com o SQL Server"
+
       # Configurar o Python
       - name: Set up Python
         uses: actions/setup-python@v4
