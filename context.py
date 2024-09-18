@@ -13,8 +13,10 @@ class Database:
             f'SERVER={os.getenv("DB_SERVER")};'
             f'DATABASE={os.getenv("DB_NAME")};'
             f'UID={os.getenv("DB_USER")};'
-            f'PWD={os.getenv("DB_PASSWORD")}'
+            f'PWD={os.getenv("DB_PASSWORD")};'
+            f'TIMEOUT=120'  # Aumenta o tempo limite para 120 segundos
         )
+
 
         self.cursor = self.conn.cursor()
 
