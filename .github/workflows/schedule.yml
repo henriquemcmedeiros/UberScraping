@@ -1,0 +1,72 @@
+name: Run Python Script Every Hour with Env Variables
+
+on:
+  schedule:
+    # Rodar a cada hora
+    - cron: '0 * * * *'
+  workflow_dispatch:  # Permite execução manual
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checar o repositório
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Instalar o driver ODBC para SQL Server e dependências adicionais
+      - name: Install ODBC Driver for SQL Server
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl apt-transport-https unixodbc-dev
+          curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+          curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+          sudo apt-get update
+          sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+          sudo apt-get install -y mssql-tools
+
+      # Configurar ODBC
+      - name: Configure ODBC
+        run: |
+          echo "[ODBC Driver 17 for SQL Server]" | sudo tee -a /etc/odbcinst.ini
+          echo "Description=Microsoft ODBC Driver 17 for SQL Server" | sudo tee -a /etc/odbcinst.ini
+          echo "Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.10.so.1.1" | sudo tee -a /etc/odbcinst.ini
+
+      # Verificar drivers ODBC instalados
+      - name: Check ODBC drivers
+        run: |
+          odbcinst -q -d -n "ODBC Driver 17 for SQL Server"
+          odbcinst -q -d
+
+      # Testar conexão com o SQL Server
+      - name: Test SQL Server Connection
+        run: |
+          sqlcmd -S ${{ secrets.DB_SERVER }} -d ${{ secrets.DB_NAME }} -U ${{ secrets.DB_USER }} -P ${{ secrets.DB_PASSWORD }} -Q "SELECT 1" || echo "Falha na conexão com o SQL Server"
+
+      # Configurar o Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.5'
+
+      # Adicionar variáveis de ambiente a partir dos secrets
+      - name: Setup environment variables
+        run: |
+          echo "DB_SERVER=${{ secrets.DB_SERVER }}" >> $GITHUB_ENV
+          echo "DB_NAME=${{ secrets.DB_NAME }}" >> $GITHUB_ENV
+          echo "DB_USER=${{ secrets.DB_USER }}" >> $GITHUB_ENV
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> $GITHUB_ENV
+
+      # Instalar dependências, se houver
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # Instalar dotenv
+      - name: Install dotenv
+        run: pip install python-dotenv
+
+      # Rodar o script Python
+      - name: Run script
+        run: python main.py
