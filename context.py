@@ -9,12 +9,15 @@ class Database:
     def __init__(self):
         # Conexão com o banco de dados usando pyodbc e variáveis do .env
         self.conn = pyodbc.connect(
-            f'DRIVER={{SQL Server}};'
+            f'DRIVER={{ODBC Driver 17 for SQL Server}};'
             f'SERVER={os.getenv("DB_SERVER")};'
             f'DATABASE={os.getenv("DB_NAME")};'
             f'UID={os.getenv("DB_USER")};'
-            f'PWD={os.getenv("DB_PASSWORD")}'
+            f'PWD={os.getenv("DB_PASSWORD")};'
+            f'TIMEOUT=120'  # Aumenta o tempo limite para 120 segundos
         )
+
+
         self.cursor = self.conn.cursor()
 
     def commit(self):
