@@ -53,10 +53,10 @@ jobs:
       # Adicionar variáveis de ambiente a partir dos secrets
       - name: Setup environment variables
         run: |
-          echo "DB_SERVER=${{ secrets.DB_SERVER }}" >> $GITHUB_ENV
-          echo "DB_NAME=${{ secrets.DB_NAME }}" >> $GITHUB_ENV
-          echo "DB_USER=${{ secrets.DB_USER }}" >> $GITHUB_ENV
-          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> $GITHUB_ENV
+          echo "DB_SERVER=${{ secrets.DB_SERVER }}" >> $GITHUB_SECRETS
+          echo "DB_NAME=${{ secrets.DB_NAME }}" >> $GITHUB_SECRETS
+          echo "DB_USER=${{ secrets.DB_USER }}" >> $GITHUB_SECRETS
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> $GITHUB_SECRETS
 
       # Instalar dependências, se houver
       - name: Install dependencies
