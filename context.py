@@ -5,18 +5,23 @@ from dotenv import load_dotenv
 # Carregar variáveis de ambiente
 load_dotenv()
 
+DB_SERVER= "thyagoquintas.com.br"
+DB_NAME= "uber"
+DB_USER= "uber"
+DB_PASSWORD= "uber"
+
 class Database:
     def __init__(self):
         # Conexão com o banco de dados usando pyodbc e variáveis do .env
         self.conn = pyodbc.connect(
-            f'DRIVER={{ODBC Driver 17 for SQL Server}};'
-            f'SERVER={os.getenv("DB_SERVER")};'
-            f'DATABASE={os.getenv("DB_NAME")};'
-            f'UID={os.getenv("DB_USER")};'
-            f'PWD={os.getenv("DB_PASSWORD")};'
+            #f'DRIVER={{ODBC Driver 17 for SQL Server}};'
+            f'DRIVER={{SQL Server}};'
+            f'SERVER={DB_SERVER};'
+            f'DATABASE={DB_NAME};'
+            f'UID={DB_USER};'
+            f'PWD={DB_PASSWORD};'
             f'TIMEOUT=120'  # Aumenta o tempo limite para 120 segundos
         )
-
 
         self.cursor = self.conn.cursor()
 
