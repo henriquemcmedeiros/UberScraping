@@ -12,9 +12,7 @@ DB_PASSWORD= "uber"
 
 class Database:
     def __init__(self):
-        # Conexão com o banco de dados usando pyodbc e variáveis do .env
         self.conn = pyodbc.connect(
-            #f'DRIVER={{ODBC Driver 17 for SQL Server}};'
             f'DRIVER={{SQL Server}};'
             f'SERVER={DB_SERVER};'
             f'DATABASE={DB_NAME};'
@@ -45,7 +43,7 @@ class Locais(Database):
             SELECT * FROM LOCAIS
         '''
         self.cursor.execute(sql)
-        return self.cursor.fetchall()  # Retorna os resultados da consulta
+        return self.cursor.fetchall()
 
 class Dados(Database):
     def insert(self, id_local, dia_Hora, preco, tempo_de_viagem, tempo_de_espera, tipo, tem_promo, dist_real):
@@ -61,4 +59,4 @@ class Dados(Database):
             SELECT * FROM DADOS
         '''
         self.cursor.execute(sql)
-        return self.cursor.fetchall()  # Retorna os resultados da consulta
+        return self.cursor.fetchall()

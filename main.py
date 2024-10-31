@@ -33,6 +33,7 @@ def main():
     destino_long = -46.6330809
     tempo_chamada = datetime.now() #.strftime('%d/%m/%Y %H:%M')
     
+    print("Iniciando coleta.")
     for index in range(1, len(locais_arr)):
         row = locais_arr[index]
         ponto_atual = str(row[1])
@@ -49,9 +50,6 @@ def main():
             },
             "query": "query Products($destinations: [InputCoordinate!]!, $includeRecommended: Boolean = false, $pickup: InputCoordinate!) { products(destinations: $destinations, includeRecommended: $includeRecommended, pickup: $pickup) { tiers { products { description fareAmountE5 estimatedTripTime hasPromo meta } } } }"
         }
-        
-        #print(f"DE: {ponto_atual} PARA: {ponto_final} INDEX: {index}")
-        #print("===========================================================")
 
         response = requests.post(url, headers=headers, json=data)
     
@@ -65,11 +63,11 @@ def main():
             for tier in result["data"]["products"]["tiers"]:
                 for product in tier["products"]:
 
-                    # Extração de dados do campo "meta" usando expressões regulares
+                    # Extração de dados do campo "meta"
                     estimated_solo_on_trip_time_match = re.search(r'"estimatedSoloOnTripTime":(\d+)', product["meta"])
                     unmodified_distance_match = re.search(r'"unmodifiedDistance":(\d+)', product["meta"])
 
-                    # Verifica se a correspondência foi encontrada e extrai os valores
+                    # Tratamento para mandar ao banco
                     estimated_solo_on_trip_time = int(estimated_solo_on_trip_time_match.group(1)) if estimated_solo_on_trip_time_match else None
                     unmodified_distance = float(unmodified_distance_match.group(1)) if unmodified_distance_match else None
 
