@@ -2,6 +2,8 @@ import requests
 import re
 from datetime import datetime
 from context import Locais, Dados
+import schedule
+import time
 
 url = 'https://m.uber.com/go/graphql'
 
@@ -48,8 +50,8 @@ def main():
             "query": "query Products($destinations: [InputCoordinate!]!, $includeRecommended: Boolean = false, $pickup: InputCoordinate!) { products(destinations: $destinations, includeRecommended: $includeRecommended, pickup: $pickup) { tiers { products { description fareAmountE5 estimatedTripTime hasPromo meta } } } }"
         }
         
-        print(f"DE: {ponto_atual} PARA: {ponto_final} INDEX: {index}")
-        print("===========================================================")
+        #print(f"DE: {ponto_atual} PARA: {ponto_final} INDEX: {index}")
+        #print("===========================================================")
 
         response = requests.post(url, headers=headers, json=data)
     
@@ -57,7 +59,7 @@ def main():
         if response.status_code != 200:
             print(f"Erro na requisição: {response.status_code}")
             continue
-        result = response.json()
+        result = response.json() 
 
         try:
             for tier in result["data"]["products"]["tiers"]:
@@ -82,5 +84,13 @@ def main():
         except Exception as e:
             print(f"Erro no processamento da resposta: {e}")
 
-if __name__ == '__main__':
+    agora = datetime.now().strftime("%H:%M:%S")
+    print(f"Executado com sucesso na hora: {agora}")
+
+schedule.every().hour.at(":00").do(main)
+
+if __name__ == "__main__":
     main()
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
