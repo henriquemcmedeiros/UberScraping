@@ -25,14 +25,7 @@ class Database:
         if platform.system() == "Windows":
             driver = "SQL Server"
         else: 
-            
-            driver = "ODBC Driver 17 for SQL Server"  # Ou "ODBC Driver 18 for SQL Server" se este estiver instalado
-
-        print("DB_SERVER:", os.getenv("DB_SERVER"))
-        print("DB_NAME:", os.getenv("DB_NAME"))
-        print("DB_USER:", os.getenv("DB_USER"))
-        print("DB_PASSWORD:", os.getenv("DB_PASSWORD"))
-        print("DRIVER:", driver)
+            driver = "ODBC Driver 17 for SQL Server"
 
         # Conectar ao banco de dados com o driver adequado
         self.conn = pyodbc.connect(
